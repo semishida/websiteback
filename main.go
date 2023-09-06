@@ -22,11 +22,11 @@ func (u *User) setNewName(newName string) {
 }
 
 func home_page(page http.ResponseWriter, r *http.Request) {
-	//rero := User{"rero", 25, -50, 4.2, 0.8}
+	rero := User{"rero", 25, -50, 4.2, 0.8}
 	//rero.setNewName("Pidor")
 	//fmt.Fprintf(page, rero.getAllInfo())
 	tmpl, _ := template.ParseFiles("mainpage.html")
-	tmpl.Execute(page, nil)
+	tmpl.Execute(page, rero)
 }
 
 func handleRequest() {
